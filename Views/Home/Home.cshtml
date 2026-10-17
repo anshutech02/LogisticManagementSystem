@@ -1,0 +1,985 @@
+﻿@*OLD CODE *@
+
+
+@*@@model LogisticManagementSystem.Models.EnquiryModel
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        ViewBag.Title = "Home";
+    }
+    @*<body>
+        <div class="container">
+            <h2 style="color:orange ;margin-top:50PX">
+                ONESPOT SOlUTION LOGISTIC
+            </h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                Indicators
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                Wrapper for slides
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/Image/Moving_Truck.jpg" alt="LogisticManagement_TransportationImage" style="width:100%;height:500px" />
+
+
+                    </div>
+
+                    <div class="item">
+
+
+                        <img src="~/Image/LogisticYardImaage.jpg" alt="LogisticManagment_Yard_Image" style="width:100%;height:500px;" />
+                    </div>
+
+                    <div class="item">
+                        <img src="~/Image/man running on graph.jpg" alt="Growth_Image On Graph" style="width:100%;height:500px;" />
+
+                    </div>
+                    <div class="item">
+                        <img src="~/Image/logistics.jpg" alt="LogisticBlog" style="width:100%;height:500px; " />
+
+
+                    </div>
+                    <div class="item">
+                        <img src="~/Image/LogisticBlog.jpg" alt="LogisticManagement_Transportation_Image" style="width:100%;height:500px; " />
+
+
+
+                    </div>
+                </div>
+                Left and right controls
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </body>
+
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></div>
+        <div class="col-lg-10 col-md-10 col-sm-0-col-xs-0" style="margin-top:30px;margin-bottom:30px">
+            <h1 style="color:red">HOW IT WORKS ?</h1>
+
+            <h3 style="background-image: url('../../Image/LogiticwareHouse.jpg');color: black">
+
+
+                Ever in the pursuit for excellence, OM Group strives to bridge the void between you and the global arena.
+                Capitalizing on its in-depth domain knowledge and expertise in the field,
+                the organization grew from a mere logistics solutions provider to a diverse business conglomerate,
+                which now is parent to various companies that offer a plethora of services.
+
+                Forget about reminders and documentation. AFM Suite not only schedules your assignment at the tap of a button but also optimizes a seamless flow of operations.
+                The interactive dashboard is suitable for Carriers, freight brokers, and freight forwarders.
+                Our freight forwarding management software makes your logistics process smooth with the dispatching,
+                Accounting, safety and compliance core modules embedded in it.
+
+            </h3>
+        </div>
+    </div>*@
+@*@Html.Partial("_EnquiryPage", Model)*@
+
+
+
+@*NEW CODE WITH NEW STYLE*@
+
+
+
+
+@model LogisticManagementSystem.Models.EnquiryModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<style>
+    /* ===============================
+       ONESPOT LOGISTIC - HOME PAGE
+       All styles scoped to this page
+       =============================== */
+
+    #osl-home {
+        --osl-navy: #071b35;
+        --osl-blue: #102f52;
+        --osl-orange: #ff8c24;
+        --osl-light: #f4f7fb;
+        --osl-text: #526176;
+        color: var(--osl-navy);
+        font-family: "Segoe UI", Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    #osl-home * {
+        box-sizing: border-box;
+    }
+
+    #osl-home .osl-container {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 25px;
+    }
+
+    /* HERO SECTION */
+
+    #osl-home .osl-hero {
+        position: relative;
+        padding: 40px 0 55px;
+        background:
+            radial-gradient(ellipse at top right,
+                rgba(255, 140, 36, 0.13), transparent 45%),
+            linear-gradient(135deg, #f8fafc, #edf3fa);
+    }
+
+    #osl-home .osl-eyebrow {
+        display: inline-block;
+        padding: 9px 16px;
+        margin-bottom: 20px;
+        color: #c96a12;
+        background: #fff0df;
+        border-radius: 30px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+    }
+
+    #osl-home .osl-hero-title {
+        margin: 0 0 18px;
+        color: var(--osl-navy);
+        font-size: clamp(32px, 4vw, 55px);
+        line-height: 1.14;
+        font-weight: 800;
+        letter-spacing: -1.4px;
+    }
+
+    #osl-home .osl-hero-title span {
+        color: var(--osl-orange);
+    }
+
+    #osl-home .osl-hero-description {
+        max-width: 580px;
+        margin: 0 0 25px;
+        color: var(--osl-text);
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    #osl-home .osl-trust-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+        margin-top: 24px;
+        color: var(--osl-blue);
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    #osl-home .osl-trust-line span::before {
+        content: "\2713";
+        display: inline-block;
+        margin-right: 7px;
+        color: #e77b16;
+        font-weight: 900;
+    }
+
+    /* CAROUSEL */
+
+    #osl-home .osl-carousel-frame {
+        position: relative;
+        margin-top: 30px;
+        overflow: hidden;
+        border-radius: 18px;
+        background: var(--osl-navy);
+        box-shadow: 0 24px 60px rgba(7, 27, 53, 0.20);
+    }
+
+    #osl-home #myCarousel {
+        margin-bottom: 0;
+    }
+
+    #osl-home #myCarousel .carousel-inner {
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    #osl-home #myCarousel .item {
+        position: relative;
+        background: var(--osl-navy);
+    }
+
+    #osl-home #myCarousel .item > img {
+        display: block;
+        width: 100%;
+        height: 510px;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.82;
+    }
+
+    #osl-home #myCarousel .item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+            90deg,
+            rgba(4, 18, 36, 0.88) 0%,
+            rgba(4, 18, 36, 0.48) 48%,
+            rgba(4, 18, 36, 0.05) 100%
+        );
+    }
+
+    #osl-home .osl-slide-content {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 7%;
+        right: 8%;
+        transform: translateY(-50%);
+        max-width: 600px;
+        color: #fff;
+    }
+
+    #osl-home .osl-slide-label {
+        display: inline-block;
+        padding: 8px 13px;
+        margin-bottom: 16px;
+        color: #fff;
+        background: rgba(255, 140, 36, 0.96);
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+
+    #osl-home .osl-slide-content h2 {
+        margin: 0 0 14px;
+        color: #fff;
+        font-size: clamp(27px, 3.5vw, 45px);
+        font-weight: 800;
+        line-height: 1.15;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    #osl-home .osl-slide-content p {
+        max-width: 500px;
+        margin: 0;
+        color: #edf3fa;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    #osl-home #myCarousel .carousel-indicators {
+        z-index: 4;
+        bottom: 13px;
+    }
+
+    #osl-home #myCarousel .carousel-indicators li {
+        width: 9px;
+        height: 9px;
+        margin: 2px 4px;
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.45);
+    }
+
+    #osl-home #myCarousel .carousel-indicators li.active {
+        width: 25px;
+        height: 9px;
+        margin: 2px 4px;
+        border: 1px solid var(--osl-orange);
+        border-radius: 10px;
+        background: var(--osl-orange);
+    }
+
+    #osl-home #myCarousel .carousel-control {
+        z-index: 3;
+        width: 7%;
+        opacity: 0.8;
+        background: none;
+        text-shadow: none;
+    }
+
+    #osl-home #myCarousel .carousel-control:hover {
+        opacity: 1;
+    }
+
+    #osl-home #myCarousel .glyphicon {
+        color: #fff;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* INTRODUCTION */
+
+    #osl-home .osl-intro {
+        padding: 85px 0;
+        background: #fff;
+    }
+
+    #osl-home .osl-section-tag {
+        display: block;
+        margin-bottom: 12px;
+        color: #d97617;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    #osl-home .osl-section-title {
+        margin: 0 0 22px;
+        color: var(--osl-navy);
+        font-size: clamp(29px, 3.5vw, 42px);
+        line-height: 1.25;
+        font-weight: 800;
+    }
+
+    #osl-home .osl-section-title span {
+        color: var(--osl-orange);
+    }
+
+    #osl-home .osl-intro-text {
+        color: var(--osl-text);
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    #osl-home .osl-feature-card {
+        height: 100%;
+        min-height: 175px;
+        padding: 25px;
+        margin-top: 25px;
+        background: #fff;
+        border: 1px solid #e8edf4;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(7, 27, 53, 0.045);
+        transition: transform 0.25s ease,
+                    box-shadow 0.25s ease;
+    }
+
+    #osl-home .osl-feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(7, 27, 53, 0.10);
+    }
+
+    #osl-home .osl-feature-number {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: var(--osl-orange);
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    #osl-home .osl-feature-card h3 {
+        margin: 0 0 10px;
+        color: var(--osl-navy);
+        font-size: 18px;
+        font-weight: 750;
+    }
+
+    #osl-home .osl-feature-card p {
+        margin: 0;
+        color: var(--osl-text);
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    /* HOW IT WORKS */
+
+    #osl-home .osl-how {
+        position: relative;
+        padding: 85px 0;
+        color: #fff;
+        background-color: #071b35;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(4, 17, 34, 0.95),
+                rgba(4, 17, 34, 0.78)
+            ),
+            url('@Url.Content("~/Image/LogiticwareHouse.jpg")');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #osl-home .osl-how .osl-section-title {
+        color: #fff;
+    }
+
+    #osl-home .osl-how .osl-intro-text {
+        color: #dbe4ef;
+    }
+
+    #osl-home .osl-how-points {
+        margin-top: 28px;
+    }
+
+    #osl-home .osl-how-point {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 19px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    #osl-home .osl-how-point:last-child {
+        border-bottom: 0;
+    }
+
+    #osl-home .osl-how-icon {
+        display: flex;
+        flex: 0 0 42px;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        color: #fff;
+        background: var(--osl-orange);
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    #osl-home .osl-how-point h3 {
+        margin: 2px 0 8px;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    #osl-home .osl-how-point p {
+        margin: 0;
+        color: #cbd7e5;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    #osl-home .osl-how-panel {
+        padding: 35px;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    #osl-home .osl-how-panel h3 {
+        margin: 0 0 18px;
+        color: #fff;
+        font-size: 23px;
+        font-weight: 750;
+    }
+
+    #osl-home .osl-how-panel p {
+        color: #dbe4ef;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    #osl-home .osl-accent-line {
+        width: 55px;
+        height: 4px;
+        margin: 0 0 22px;
+        background: var(--osl-orange);
+        border-radius: 5px;
+    }
+
+    /* ENQUIRY AREA */
+
+    #osl-home .osl-enquiry-section {
+        padding: 75px 0;
+        background: var(--osl-light);
+    }
+
+    #osl-home .osl-enquiry-heading {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #osl-home .osl-enquiry-heading p {
+        color: var(--osl-text);
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @@media (max-width: 767px) {
+        #osl-home .osl-container {
+            padding: 0 16px;
+        }
+
+        #osl-home .osl-hero {
+            padding: 30px 0 35px;
+        }
+
+        #osl-home .osl-hero-title {
+            letter-spacing: -0.6px;
+        }
+
+        #osl-home .osl-hero-description {
+            font-size: 14px;
+        }
+
+        #osl-home .osl-carousel-frame {
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+
+        #osl-home #myCarousel .carousel-inner {
+            border-radius: 12px;
+        }
+
+        #osl-home #myCarousel .item > img {
+            height: 360px;
+        }
+
+        #osl-home .osl-slide-content {
+            left: 8%;
+            right: 8%;
+        }
+
+        #osl-home .osl-slide-content h2 {
+            font-size: 27px;
+        }
+
+        #osl-home .osl-slide-content p {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        #osl-home .osl-slide-label {
+            margin-bottom: 12px;
+            font-size: 10px;
+        }
+
+        #osl-home .osl-intro,
+        #osl-home .osl-how,
+        #osl-home .osl-enquiry-section {
+            padding: 55px 0;
+        }
+
+        #osl-home .osl-feature-card {
+            min-height: 0;
+        }
+
+        #osl-home .osl-how-panel {
+            padding: 25px 20px;
+        }
+
+        #osl-home #myCarousel .carousel-control {
+            width: 10%;
+        }
+    }
+
+    @@media (prefers-reduced-motion: reduce) {
+        #osl-home *,
+        #osl-home *::before,
+        #osl-home *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+    }
+</style>
+
+<div id="osl-home">
+
+    <!-- HERO SECTION -->
+    <section class="osl-hero">
+        <div class="osl-container">
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+
+                    <span class="osl-eyebrow">
+                        Logistics • Transportation • Solutions
+                    </span>
+
+                    <h1 class="osl-hero-title">
+                        ONESPOT SOLUTION
+                        <span>LOGISTIC</span>
+                    </h1>
+
+                    <p class="osl-hero-description"
+                       style="margin-left:auto;margin-right:auto;">
+                        Smarter logistics, reliable transportation, and
+                        streamlined operations. We help connect businesses
+                        to their destinations with efficient logistics solutions.
+                    </p>
+
+                    <div class="osl-trust-line"
+                         style="justify-content:center;">
+                        <span>Reliable Operations</span>
+                        <span>Efficient Transportation</span>
+                        <span>Smart Logistics</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXISTING CAROUSEL: SAME ID AND FIVE IMAGES -->
+            <div class="osl-carousel-frame">
+
+                <div id="myCarousel"
+                     class="carousel slide"
+                     data-ride="carousel"
+                     data-interval="5000">
+
+                    <!-- Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel"
+                            data-slide-to="0"
+                            class="active"></li>
+                        <li data-target="#myCarousel"
+                            data-slide-to="1"></li>
+                        <li data-target="#myCarousel"
+                            data-slide-to="2"></li>
+                        <li data-target="#myCarousel"
+                            data-slide-to="3"></li>
+                        <li data-target="#myCarousel"
+                            data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Carousel Slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <img src="@Url.Content("~/Image/Moving_Truck.jpg")"
+                                 alt="Logistics transportation truck" />
+
+                            <div class="osl-slide-content">
+                                <span class="osl-slide-label">
+                                    Transportation Solutions
+                                </span>
+                                <h2>Moving Your Business Forward</h2>
+                                <p>
+                                    Dependable transportation solutions
+                                    designed to keep your business moving
+                                    and your operations connected.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="@Url.Content("~/Image/LogisticYardImaage.jpg")"
+                                 alt="Logistics yard and freight operations" />
+
+                            <div class="osl-slide-content">
+                                <span class="osl-slide-label">
+                                    Freight Management
+                                </span>
+                                <h2>Smarter Freight Operations</h2>
+                                <p>
+                                    Bring logistics activities together
+                                    with organized freight handling and
+                                    efficient operational planning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="@Url.Content("~/Image/man running on graph.jpg")"
+                                 alt="Business growth and performance" />
+
+                            <div class="osl-slide-content">
+                                <span class="osl-slide-label">
+                                    Business Growth
+                                </span>
+                                <h2>Built for Better Performance</h2>
+                                <p>
+                                    Support business growth with
+                                    streamlined workflows and a focus
+                                    on operational efficiency.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="@Url.Content("~/Image/logistics.jpg")"
+                                 alt="Logistics and supply chain management" />
+
+                            <div class="osl-slide-content">
+                                <span class="osl-slide-label">
+                                    Supply Chain Solutions
+                                </span>
+                                <h2>Connecting Every Destination</h2>
+                                <p>
+                                    Make logistics coordination easier
+                                    through connected processes and
+                                    dependable transportation planning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="@Url.Content("~/Image/LogisticBlog.jpg")"
+                                 alt="Logistics management and transportation" />
+
+                            <div class="osl-slide-content">
+                                <span class="osl-slide-label">
+                                    Modern Logistics
+                                </span>
+                                <h2>Efficiency at Every Step</h2>
+                                <p>
+                                    Discover a more organized approach
+                                    to logistics, freight coordination,
+                                    and transportation management.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Previous Control -->
+                    <a class="left carousel-control"
+                       href="#myCarousel"
+                       role="button"
+                       data-slide="prev"
+                       aria-label="Previous slide">
+
+                        <span class="glyphicon glyphicon-chevron-left"
+                              aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <!-- Next Control -->
+                    <a class="right carousel-control"
+                       href="#myCarousel"
+                       role="button"
+                       data-slide="next"
+                       aria-label="Next slide">
+
+                        <span class="glyphicon glyphicon-chevron-right"
+                              aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTRODUCTION AND FEATURES -->
+    <section class="osl-intro">
+        <div class="osl-container">
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 text-center">
+
+                    <span class="osl-section-tag">
+                        About Our Approach
+                    </span>
+
+                    <h2 class="osl-section-title">
+                        Logistics Made <span>More Efficient</span>
+                    </h2>
+
+                    <p class="osl-intro-text">
+                        Ever in the pursuit of excellence, logistics
+                        organizations strive to connect businesses with
+                        the wider world. With a focus on operational
+                        knowledge, reliable transportation, and efficient
+                        coordination, modern logistics solutions help
+                        simplify complex supply chain activities.
+                    </p>
+
+                    <p class="osl-intro-text">
+                        From freight coordination and dispatching to
+                        accounting, safety, and compliance, organized
+                        workflows can help carriers, freight brokers,
+                        and freight forwarders manage their daily
+                        operations more effectively.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="osl-feature-card">
+                        <span class="osl-feature-number">01</span>
+                        <h3>Transportation</h3>
+                        <p>
+                            Support the movement of goods with
+                            organized transportation planning
+                            and coordination.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="osl-feature-card">
+                        <span class="osl-feature-number">02</span>
+                        <h3>Freight Coordination</h3>
+                        <p>
+                            Bring freight activities and operational
+                            workflows together in a more organized way.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="osl-feature-card">
+                        <span class="osl-feature-number">03</span>
+                        <h3>Smart Operations</h3>
+                        <p>
+                            Reduce unnecessary and manual coordination
+                            through efficient processes and planning.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="osl-feature-card">
+                        <span class="osl-feature-number">04</span>
+                        <h3>Business Growth</h3>
+                        <p>
+                            Build a strong foundation for consistent
+                            service and improved operational efficiency.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="osl-how">
+        <div class="osl-container">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <span class="osl-section-tag">
+                        Our Process
+                    </span>
+
+                    <h2 class="osl-section-title">
+                        HOW IT <span>WORKS?</span>
+                    </h2>
+
+                    <p class="osl-intro-text">
+                        A smooth logistics process depends on effective
+                        coordination, organized information, and timely
+                        operational decisions. Our approach focuses on
+                        bringing essential logistics activities together.
+                    </p>
+
+                    <div class="osl-how-points">
+
+                        <div class="osl-how-point">
+                            <div class="osl-how-icon">1</div>
+                            <div>
+                                <h3>Plan and Coordinate</h3>
+                                <p>
+                                    Organize assignments and coordinate
+                                    logistics activities according to
+                                    operational requirements.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="osl-how-point">
+                            <div class="osl-how-icon">2</div>
+                            <div>
+                                <h3>Manage Daily Operations</h3>
+                                <p>
+                                    Keep dispatching, freight coordination,
+                                    and related tasks organized through
+                                    efficient workflows.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="osl-how-point">
+                            <div class="osl-how-icon">3</div>
+                            <div>
+                                <h3>Monitor and Improve</h3>
+                                <p>
+                                    Review operational information to
+                                    support informed decisions and
+                                    continuous improvement.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 col-md-offset-1">
+
+                    <div class="osl-how-panel">
+
+                        <div class="osl-accent-line"></div>
+
+                        <h3>One Connected Logistics Experience</h3>
+
+                        <p>
+                            Forget about scattered information and
+                            complicated manual coordination. Well-organized
+                            logistics workflows can help teams manage
+                            assignments, freight forwarding, dispatching,
+                            accounting, safety, and compliance activities.
+                        </p>
+
+                        <p>
+                            Whether supporting carriers, freight brokers,
+                            or freight forwarders, the goal is to make
+                            everyday logistics operations more organized,
+                            transparent, and efficient.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXISTING ENQUIRY PARTIAL: MODEL PRESERVED -->
+    <section class="osl-enquiry-section">
+        <div class="osl-container">
+
+            <div class="osl-enquiry-heading">
+
+                <span class="osl-section-tag">
+                    Get in Touch
+                </span>
+
+                <h2 class="osl-section-title">
+                    Let's Discuss Your <span>Requirements</span>
+                </h2>
+
+                <p>
+                    Have a logistics enquiry? Share your details
+                    using the form below.
+                </p>
+
+            </div>
+
+            @Html.Partial("_EnquiryPage", Model)
+
+        </div>
+    </section>
+
+</div>
